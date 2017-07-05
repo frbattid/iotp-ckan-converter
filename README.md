@@ -1,7 +1,7 @@
 # iotp-ckan-converter
 Tool for converting CKAN's DataStore-based data in CKAN's FileStore-based data.
 
-Given a resource with an associated DataStore, three new resources are added, having each one an associated file in the FileStore. Those files are serializations of the data within the original DataStore, in these three formats:
+Given a resource with an associated DataStore, three new resources are added, having each one an associated file in the FileStore. Those files are serializations of the data within the original DataStore, in the following three formats:
 
 * Json
 * CSV
@@ -28,12 +28,12 @@ That will download all dependencies under `node_modules/`.
 Configuration is given as a Json file within `conf/` containing the following fields:
 
 * <b>connection</b>:
-    * <b>endpoint</b>: http URL for CKAN API endpoint.
-    * <b>authentication</b>: API key for a CKAN's user.
+    * <b>endpoint</b>: http URL for CKAN's API endpoint.
+    * <b>authentication</b>: API key for a CKAN's user authorized to administrate CKAN.
 * <b>data</b>:
-    * <b>package_id</b>: string-based name or CKAN's internal identifier where the resource to be converted lives.
-    * <b>resource_id</b>: CKAN's internal identifier (string-based names are not allowed bby CKAN's API) of the resource to be converted.
-    * <b>datastore_fields</b>: Fields or columns of the DataStore related to the resource to be converted.
+    * <b>package_id</b>: string-based name or CKAN's internal identifier of the dataset (also known as package) where the resource to be converted lives in.
+    * <b>resource_id</b>: CKAN's internal identifier (string-based names are not allowed bby CKAN's API) of the DataStore-based resource to be converted.
+    * <b>datastore_fields</b>: Fields or columns of the DataStore related to the resource to be converted. This is required for the CVS conversion.
     * <b>max_records</b>: Maximum number of records to be converted (useful if CAKN's web server is configured for a maximum uploaded file size).
 
 A configuration example could be:
@@ -59,7 +59,8 @@ Run the following command:
 
     $ npm start
 
-If the FileStore related resources do not exist in the given dataset, the three new resources are created and the three files are uploaded and associated to them.
+If the FileStore-based resources do not exist in the given dataset, then the three new resources are created and the three serialization files are uploaded and associated to them.
 
-Nevertheless, if the FileStore related resources already exist, then the associated files are updated (the resource remains the same).
+Nevertheless, if the FileStore-based resources already exist, then the associated files are updated (the FileStore-based resources remain the same).
 
+In both cases, traces regarding the CKAN responses to API requests are printed in stdout.
