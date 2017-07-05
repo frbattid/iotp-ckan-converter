@@ -7,6 +7,7 @@
     "package_id": "",
     "resource_name": "",
     "resource_id": "",
-    "datastore_fields": []
+    "datastore_fields": [],
+    "max_records": 10000
   }
 }
