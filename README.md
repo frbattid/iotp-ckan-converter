@@ -16,7 +16,7 @@ Then, installing this application is as easy as running:
 
 That will download all dependencies under `node_modules/`.
 
-## Configuration
+## Configuration
 Configuration is given as a Json file within `conf/` containing the following fields:
 
 * <b>connection</b>:
@@ -46,7 +46,7 @@ A configuration example could be:
 }
 ```
 
-## Running
+## Running
 Run the following command:
 
     $ npm start
