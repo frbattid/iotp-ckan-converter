@@ -1,0 +1,12 @@
+{
+  "connection": {
+    "endpoint": "",
+    "authentication": ""
+  },
+  "data": {
+    "package_id": "",
+    "resource_name": "",
+    "resource_id": "",
+    "datastore_fields": []
+  }
+}

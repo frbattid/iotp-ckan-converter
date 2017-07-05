@@ -1,0 +1,19 @@
+{
+  "name": "iotp-ckan-converter",
+  "description": "Tool for converting CKAN's DataStore-based data in CKAN's FileStore-based data",
+  "version": "0.0.0-next",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frbattid/iotp-ckan-converter.git"
+  },
+  "dependencies": {
+    "request": "2.81.0",
+    "tmp": "0.0.31",
+    "json2csv": "3.7.3",
+    "js2xmlparser": "3.0.0",
+    "async": "2.5.0"
+  },
+  "scripts": {
+    "start": "node ./lib/converter.js"
+  }
+}
