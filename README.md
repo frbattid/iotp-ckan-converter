@@ -20,13 +20,13 @@ That will download all dependencies under `node_modules/`.
 Configuration is given as a Json file within `conf/` containing the following fields:
 
 * <b>connection</b>:
-** <b>endpoint</b>: http URL for CKAN API endpoint.
-** <b>authentication</b>: API key for a CKAN's user.
+    * <b>endpoint</b>: http URL for CKAN API endpoint.
+    * <b>authentication</b>: API key for a CKAN's user.
 * <b>data</b>:
-** <b>package_id</b>: string-based name or CKAN's internal identifier where the resource to be converted lives.
-** <b>resource_id</b>: CKAN's internal identifier (string-based names are not allowed bby CKAN's API) of the resource to be converted.
-** <b>datastore_fields</b>: Fields or columns of the DataStore related to the resource to be converted.
-** <b>max_records</b>: Maximum number of records to be converted (useful if CAKN's web server is configured for a maximum uploaded file size).
+    * <b>package_id</b>: string-based name or CKAN's internal identifier where the resource to be converted lives.
+    * <b>resource_id</b>: CKAN's internal identifier (string-based names are not allowed bby CKAN's API) of the resource to be converted.
+    * <b>datastore_fields</b>: Fields or columns of the DataStore related to the resource to be converted.
+    * <b>max_records</b>: Maximum number of records to be converted (useful if CAKN's web server is configured for a maximum uploaded file size).
 
 A configuration example could be:
 
