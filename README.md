@@ -10,6 +10,14 @@ Given a resource with an associated DataStore, three new resources are added, ha
 ## Installation
 iotp-ckan-converter is a Node.js application. Thus, [Node.js](https://nodejs.org/en/) must be installed.
 
+Start by cloning the project repository:
+
+    $ git clone https://github.com/frbattid/iotp-ckan-converter.git
+
+That must have created a `iotp-ckan-converter` folder; enter it:
+
+    $ cd iotp-ckan-converter
+
 Then, installing this application is as easy as running:
 
     $ npm install
